@@ -10,18 +10,23 @@ using System.IO;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using Test;
+using DAL;
 
 namespace QuanLyNhanSu.Areas.admin.Controllers
 {
     public class QuanLyUserController : AuthorController
     {
         QuanLyNhanSuEntities db = new QuanLyNhanSuEntities();
+        Class1 c = new Class1();
         //
         // GET: /admin/QuanLyUser/
         public ActionResult Index()
         {
-            var user = db.NhanViens.Where(x => x.MaNhanVien != "admin" && x.TrangThai == true).ToList();
-            return View(user);
+            //var user = db.NhanViens.Where(x => x.MaNhanVien != "admin" && x.TrangThai == true).ToList();
+            //return View(user);
+
+            return View(c.GetUser());
         }
 
 
@@ -139,12 +144,12 @@ namespace QuanLyNhanSu.Areas.admin.Controllers
 
         public ActionResult ThemUser()
         {
-            var chucvu = db.ChucVuNhanViens.ToList();
-            var phongban = db.PhongBans.ToList();
-            var hopdong = db.HopDongs.ToList();
-            var chuyennganh = db.ChuyenNganhs.ToList();
-            var trinhdo = db.TrinhDoHocVans.ToList();
-            List<ChucVuNhanVien> list = chucvu;
+            //var chucvu = db.ChucVuNhanViens.ToList();
+            //var phongban = db.PhongBans.ToList();
+            //var hopdong = db.HopDongs.ToList();
+            //var chuyennganh = db.ChuyenNganhs.ToList();
+            //var trinhdo = db.TrinhDoHocVans.ToList();
+            //List<ChucVuNhanVien> list = chucvu;
 
             return View(new UserValidate());
         }
@@ -158,7 +163,7 @@ namespace QuanLyNhanSu.Areas.admin.Controllers
             {
                 ViewBag.err = String.Empty;
                 var checkMaNhanVien = db.NhanViens.Any(x => x.MaNhanVien == nv.MaNhanVien);
-                
+
                 if (checkMaNhanVien)
                 {
                     ViewBag.err = "tài khoản đã tồn tại";
@@ -167,64 +172,9 @@ namespace QuanLyNhanSu.Areas.admin.Controllers
                 }
                 else
                 {
-                    Luong luong = new Luong();
-                    HopDong hd = new HopDong();
-                    NhanVien nvAdd = new NhanVien();
-                    nvAdd.MaNhanVien = nv.MaNhanVien;
-                    nvAdd.MatKhau = nv.MatKhau;
-                    nvAdd.HoTen = nv.HoTen;
-                    nvAdd.NgaySinh = nv.NgaySinh;
-                    nvAdd.QueQuan = nv.QueQuan;
-                    nvAdd.GioiTinh = nv.GioiTinh;
-                    nvAdd.DanToc = nv.DanToc;
-                    nvAdd.MaChucVuNV = nv.MaChucVuNV;
-                    nvAdd.MaPhongBan = nv.MaPhongBan;
-                    nvAdd.MaChuyenNganh = nv.MaChuyenNganh;
-                    nvAdd.MaTrinhDoHocVan = nv.MaTrinhDoHocVan;
-                    nvAdd.MaHopDong = nv.MaNhanVien;
-                    nvAdd.TrangThai = true;
-                    nvAdd.HinhAnh = "icon.jpg";
-
-                    //add hop dong
-                    hd.MaHopDong = nv.MaNhanVien;
-                    hd.NgayBatDau = DateTime.Now.Date;
-
-                    //tao bang luong
-                    luong.MaNhanVien = nv.MaNhanVien;
-                    luong.LuongToiThieu = 1150000;
-                    luong.BHXH = 8;
-                    luong.BHYT = 1.5;
-                    luong.BHTN = 1;
-                    var trinhdo = db.TrinhDoHocVans.Where(n=>n.MaTrinhDoHocVan.Equals(nv.MaTrinhDoHocVan)).FirstOrDefault();
-                    var chucvu = db.ChucVuNhanViens.Where(n=>n.MaChucVuNV.Equals(nv.MaChucVuNV)).SingleOrDefault();
-                    
-                        if (trinhdo.MaTrinhDoHocVan.Equals(nv.MaTrinhDoHocVan))
-                        {
-                            luong.HeSoLuong = (double)trinhdo.HeSoBac;
-                        }
-                    
-                    
-                        if (chucvu.MaChucVuNV.Equals(nv.MaChucVuNV))
-                        {
-                            if (chucvu.HSPC != null)
-                            {
-                                luong.PhuCap = (double)chucvu.HSPC;
-                            }
-                            else
-                            { luong.PhuCap = 0; }
-                        }
-                    
-
-
-                    // tmp.Image = "~/Content/images/icon.jpg";
-                    db.NhanViens.Add(nvAdd);
-                    db.HopDongs.Add(hd);
-
-                    db.Luongs.Add(luong);
-                    // @ViewBag.add = "Đăng ký thành công";
-                    db.SaveChanges();
+                    ViewBag.error = c.Them(nv);
                     //xác thực tài khoản trong ứng dụng
-                    FormsAuthentication.SetAuthCookie(nvAdd.MaNhanVien, false);
+                    //FormsAuthentication.SetAuthCookie(nvAdd.MaNhanVien, false);
                     //trả về trang quản lý
 
                     return Redirect("/admin/QuanLyUser");

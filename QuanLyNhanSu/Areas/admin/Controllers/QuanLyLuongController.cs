@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 using System.IO;
 using System.Web.UI;
 using System.Data;
+using DAL;
 
 namespace QuanLyNhanSu.Areas.admin.Controllers
 {

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using QuanLyNhanSu.Models;
 using System.Web.Security;
+using DAL;
 
 namespace QuanLyNhanSu.Controllers
 {

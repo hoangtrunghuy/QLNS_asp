@@ -49,6 +49,14 @@
       <Private>True</Private>
       <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Excel">
       <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
     </Reference>
@@ -128,12 +136,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -193,84 +195,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CapNhatLuong.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CapNhatTrinhDoHocVan.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ChiTietLuong.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ChucVuNhanVien.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ChuyenNganh.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\HopDong.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\KhenThuong.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\KyLuat.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LuanChuyenNhanVien.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Luong.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LuongA1GV.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LuongA21PGS.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LuongA31GS.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\NhanVien.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PhongBan.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\PhongBanValidation.cs" />
-    <Compile Include="Models\QuanLyNhanSuModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyNhanSuModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QuanLyNhanSuModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QuanLyNhanSuModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyNhanSuModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagrams_Result.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ThoiViec.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TrinhDoHocVan.cs">
-      <DependentUpon>QuanLyNhanSuModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UserValidate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -530,23 +456,6 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
-    <EntityDeploy Include="Models\QuanLyNhanSuModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanLyNhanSuModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\QuanLyNhanSuModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLyNhanSuModel.edmx</DependentUpon>
-      <LastGenOutput>QuanLyNhanSuModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\QuanLyNhanSuModel.edmx.diagram">
-      <DependentUpon>QuanLyNhanSuModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\QuanLyNhanSuModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLyNhanSuModel.edmx</DependentUpon>
-      <LastGenOutput>QuanLyNhanSuModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\customjs\activedatatable.js" />
@@ -583,7 +492,9 @@
     <Content Include="Scripts\respond.min.js" />
     <None Include="Scripts\_references.js" />
     <Content Include="Views\login\login.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -611,7 +522,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
@@ -620,6 +533,16 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{673e660b-2a9c-4ec2-99f4-77504d9ed171}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Test\Test.csproj">
+      <Project>{56418322-b611-4961-bacc-c4178c4c3c30}</Project>
+      <Name>Test</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

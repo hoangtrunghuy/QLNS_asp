@@ -1,0 +1,12 @@
+C:\Users\ASUS\Desktop\QLNS_asp\Test\bin\Debug\Test.dll.config
+C:\Users\ASUS\Desktop\QLNS_asp\Test\bin\Debug\Test.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Test\bin\Debug\Test.pdb
+C:\Users\ASUS\Desktop\QLNS_asp\Test\bin\Debug\DAL.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Test\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Test\bin\Debug\DAL.pdb
+C:\Users\ASUS\Desktop\QLNS_asp\Test\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\QLNS_asp\Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\QLNS_asp\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\QLNS_asp\Test\obj\Debug\Test.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Test\obj\Debug\Test.pdb

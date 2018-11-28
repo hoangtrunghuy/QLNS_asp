@@ -8,6 +8,7 @@ using System.Data;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Web.UI;
+using DAL;
 namespace QuanLyNhanSu.Areas.admin.Controllers
 {
     public class QuanLyPhongBanController : AuthorController
