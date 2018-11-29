@@ -539,9 +539,9 @@
       <Project>{673e660b-2a9c-4ec2-99f4-77504d9ed171}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Test\Test.csproj">
-      <Project>{56418322-b611-4961-bacc-c4178c4c3c30}</Project>
-      <Name>Test</Name>
+    <ProjectReference Include="..\User\User.csproj">
+      <Project>{cb40d520-b1b5-47a2-b1d5-66e05b1ed0f5}</Project>
+      <Name>User</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

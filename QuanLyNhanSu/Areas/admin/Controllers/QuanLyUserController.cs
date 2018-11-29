@@ -10,131 +10,135 @@ using System.IO;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using Test;
 using DAL;
+using User;
 
 namespace QuanLyNhanSu.Areas.admin.Controllers
 {
     public class QuanLyUserController : AuthorController
     {
         QuanLyNhanSuEntities db = new QuanLyNhanSuEntities();
-        Class1 c = new Class1();
-        //
+        Employee user = new Employee();
+
         // GET: /admin/QuanLyUser/
         public ActionResult Index()
         {
             //var user = db.NhanViens.Where(x => x.MaNhanVien != "admin" && x.TrangThai == true).ToList();
             //return View(user);
 
-            return View(c.GetUser());
+            return View(user.GetUser());
         }
 
 
         public ActionResult XoaUser(String id)
         {
 
-            var a = db.NhanViens.Where(x => x.MaNhanVien == id).SingleOrDefault();
-            var hd = db.HopDongs.Where(x => x.MaHopDong == id).SingleOrDefault();
-            var luong = db.Luongs.Where(x => x.MaNhanVien == id).SingleOrDefault();
-            var ctLuong = db.ChiTietLuongs.Where(x => x.MaNhanVien == id).ToList();
-            foreach (var item in ctLuong)
-            {
-                db.ChiTietLuongs.Remove(item);
-            }
+            //var a = db.NhanViens.Where(x => x.MaNhanVien == id).SingleOrDefault();
+            //var hd = db.HopDongs.Where(x => x.MaHopDong == id).SingleOrDefault();
+            //var luong = db.Luongs.Where(x => x.MaNhanVien == id).SingleOrDefault();
+            //var ctLuong = db.ChiTietLuongs.Where(x => x.MaNhanVien == id).ToList();
+            //foreach (var item in ctLuong)
+            //{
+            //    db.ChiTietLuongs.Remove(item);
+            //}
 
-            db.Luongs.Remove(luong);
-            db.NhanViens.Remove(a);
-            db.HopDongs.Remove(hd);
+            //db.Luongs.Remove(luong);
+            //db.NhanViens.Remove(a);
+            //db.HopDongs.Remove(hd);
 
-            db.SaveChanges();
+            //db.SaveChanges();
+            user.DeleteUser(id);
+
             return Redirect("~/admin/QuanLyUser");
         }
         [HttpGet]
         public ActionResult UpdateUser(String id)
         {
-            var user = db.NhanViens.Where(n => n.MaNhanVien == id).FirstOrDefault();
-            UserValidate userVal = new UserValidate();
+            //var user = db.NhanViens.Where(n => n.MaNhanVien == id).FirstOrDefault();
+            //UserValidate userVal = new UserValidate();
 
-            userVal.MaNhanVien = user.MaNhanVien;
-            userVal.HoTen = user.HoTen;
-            userVal.MatKhau = user.MatKhau;
-            userVal.GioiTinh = user.GioiTinh;
+            //userVal.MaNhanVien = user.MaNhanVien;
+            //userVal.HoTen = user.HoTen;
+            //userVal.MatKhau = user.MatKhau;
+            //userVal.GioiTinh = user.GioiTinh;
 
-            userVal.MaChucVuNV = user.MaChucVuNV;
-            userVal.QueQuan = user.QueQuan;
-            userVal.HinhAnh = user.HinhAnh;
-            userVal.DanToc = user.DanToc;
-            userVal.sdt_NhanVien = user.sdt_NhanVien;
-            userVal.MaHopDong = user.MaHopDong;
+            //userVal.MaChucVuNV = user.MaChucVuNV;
+            //userVal.QueQuan = user.QueQuan;
+            //userVal.HinhAnh = user.HinhAnh;
+            //userVal.DanToc = user.DanToc;
+            //userVal.sdt_NhanVien = user.sdt_NhanVien;
+            //userVal.MaHopDong = user.MaHopDong;
 
-            userVal.NgaySinh = user.NgaySinh;
-            userVal.TrangThai = user.TrangThai;
-            userVal.MaChuyenNganh = user.MaChuyenNganh;
-            userVal.MaTrinhDoHocVan = user.MaTrinhDoHocVan;
-            userVal.MaPhongBan = user.MaPhongBan;
+            //userVal.NgaySinh = user.NgaySinh;
+            //userVal.TrangThai = user.TrangThai;
+            //userVal.MaChuyenNganh = user.MaChuyenNganh;
+            //userVal.MaTrinhDoHocVan = user.MaTrinhDoHocVan;
+            //userVal.MaPhongBan = user.MaPhongBan;
 
-            userVal.CMND = user.CMND;
-            userVal.XacNhanMatKhau = user.MatKhau;
+            //userVal.CMND = user.CMND;
+            //userVal.XacNhanMatKhau = user.MatKhau;
 
-            return View(userVal);
+            return View(user.GetUser(id));
             //  return View(user);
         }
         [HttpPost]
         public ActionResult UpdateUser(UserValidate upUser)
         {
-            upUser.XacNhanMatKhau = upUser.MatKhau;
-            var us = db.NhanViens.Where(n => n.MaNhanVien == upUser.MaNhanVien).FirstOrDefault();
+            //upUser.XacNhanMatKhau = upUser.MatKhau;
+            //var us = db.NhanViens.Where(n => n.MaNhanVien == upUser.MaNhanVien).FirstOrDefault();
 
             if (ModelState.IsValid)
             {
                 //var us = db.NhanViens.Where(n => n.MaNhanVien == upUser.MaNhanVien).FirstOrDefault();
-                if (us != null)
-                {
-
-                    CapNhatTrinhDoHocVan capNhat = new CapNhatTrinhDoHocVan();
-                    capNhat.MaNhanVien = upUser.MaNhanVien;
-                    capNhat.NgayCapNhat = DateTime.Now.Date;
-                    capNhat.MaTrinhDoTruoc = us.MaTrinhDoHocVan;
-                    capNhat.MaTrinhDoCapNhat = upUser.MaTrinhDoHocVan;
-
-                    us.MaNhanVien = upUser.MaNhanVien;
-                    us.HoTen = upUser.HoTen;
-                    us.MatKhau = upUser.MatKhau;
-                    us.GioiTinh = upUser.GioiTinh;
-
-                    us.MaChucVuNV = upUser.MaChucVuNV;
-                    us.QueQuan = upUser.QueQuan;
-                    us.HinhAnh = upUser.HinhAnh;
-                    us.DanToc = upUser.DanToc;
-                    us.sdt_NhanVien = upUser.sdt_NhanVien;
-                    us.MaHopDong = upUser.MaHopDong;
-
-                    us.NgaySinh = upUser.NgaySinh;
-                    us.TrangThai = upUser.TrangThai;
-                    us.MaChuyenNganh = upUser.MaChuyenNganh;
-                    us.MaTrinhDoHocVan = upUser.MaTrinhDoHocVan;
-                    us.MaPhongBan = upUser.MaPhongBan;
-                    us.CMND = upUser.CMND;
-
-                    var trinhdo = db.TrinhDoHocVans.Where(n => n.MaTrinhDoHocVan.Equals(us.MaTrinhDoHocVan)).FirstOrDefault();
-
-                    var luong = db.Luongs.Where(n => n.MaNhanVien.Equals(us.MaNhanVien)).FirstOrDefault();
-
-                    if (trinhdo.HeSoBac != null)
-                    {
-                        luong.HeSoLuong = luong.HeSoLuong < (double)trinhdo.HeSoBac ? (double)trinhdo.HeSoBac : luong.HeSoLuong;
-                    }
-                    else
-                    { luong.HeSoLuong = 1; }
 
 
+                //CapNhatTrinhDoHocVan capNhat = new CapNhatTrinhDoHocVan();
+                //capNhat.MaNhanVien = upUser.MaNhanVien;
+                //capNhat.NgayCapNhat = DateTime.Now.Date;
+                //capNhat.MaTrinhDoTruoc = us.MaTrinhDoHocVan;
+                //capNhat.MaTrinhDoCapNhat = upUser.MaTrinhDoHocVan;
 
-                    db.CapNhatTrinhDoHocVans.Add(capNhat);
+                //us.MaNhanVien = upUser.MaNhanVien;
+                //us.HoTen = upUser.HoTen;
+                //us.MatKhau = upUser.MatKhau;
+                //us.GioiTinh = upUser.GioiTinh;
 
-                    db.SaveChanges();
-                    return Redirect("/admin/QuanLyUser");
+                //us.MaChucVuNV = upUser.MaChucVuNV;
+                //us.QueQuan = upUser.QueQuan;
+                //us.HinhAnh = upUser.HinhAnh;
+                //us.DanToc = upUser.DanToc;
+                //us.sdt_NhanVien = upUser.sdt_NhanVien;
+                //us.MaHopDong = upUser.MaHopDong;
 
-                }
+                //us.NgaySinh = upUser.NgaySinh;
+                //us.TrangThai = upUser.TrangThai;
+                //us.MaChuyenNganh = upUser.MaChuyenNganh;
+                //us.MaTrinhDoHocVan = upUser.MaTrinhDoHocVan;
+                //us.MaPhongBan = upUser.MaPhongBan;
+                //us.CMND = upUser.CMND;
+
+                //var trinhdo = db.TrinhDoHocVans.Where(n => n.MaTrinhDoHocVan.Equals(us.MaTrinhDoHocVan)).FirstOrDefault();
+
+                //var luong = db.Luongs.Where(n => n.MaNhanVien.Equals(us.MaNhanVien)).FirstOrDefault();
+
+                //if (trinhdo.HeSoBac != null)
+                //{
+                //    luong.HeSoLuong = luong.HeSoLuong < (double)trinhdo.HeSoBac ? (double)trinhdo.HeSoBac : luong.HeSoLuong;
+                //}
+                //else
+                //{ luong.HeSoLuong = 1; }
+
+
+
+                //db.CapNhatTrinhDoHocVans.Add(capNhat);
+
+                //db.SaveChanges();
+
+                
+                ViewBag.thongbao = user.UpdateUser(upUser);
+                return Redirect("/admin/QuanLyUser");
+
+
             }
             return View(upUser);
 
@@ -172,7 +176,7 @@ namespace QuanLyNhanSu.Areas.admin.Controllers
                 }
                 else
                 {
-                    ViewBag.error = c.Them(nv);
+                    ViewBag.error = user.AddUser(nv);
                     //xác thực tài khoản trong ứng dụng
                     //FormsAuthentication.SetAuthCookie(nvAdd.MaNhanVien, false);
                     //trả về trang quản lý
