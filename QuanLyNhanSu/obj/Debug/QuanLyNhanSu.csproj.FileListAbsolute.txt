@@ -128,3 +128,5 @@ C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\DAL.dll
 C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\DAL.pdb
 C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\User.dll
 C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\User.pdb
+C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\KhenThuong.dll
+C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\KhenThuong.pdb

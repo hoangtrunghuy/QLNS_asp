@@ -21,8 +21,5 @@ namespace QuanLyNhanSu.Areas.admin.Controllers
             }
 
         }
-        //
-        // GET: /admin/Author/
-
     }
 }

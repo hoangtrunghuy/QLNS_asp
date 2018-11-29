@@ -539,6 +539,10 @@
       <Project>{673e660b-2a9c-4ec2-99f4-77504d9ed171}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KhenThuong\KhenThuong.csproj">
+      <Project>{a008b0fd-3814-4ae2-ae00-ba2e6d32a226}</Project>
+      <Name>KhenThuong</Name>
+    </ProjectReference>
     <ProjectReference Include="..\User\User.csproj">
       <Project>{cb40d520-b1b5-47a2-b1d5-66e05b1ed0f5}</Project>
       <Name>User</Name>

@@ -13,7 +13,6 @@ using DAL;
 namespace QuanLyNhanSu.Areas.admin.Controllers
 {
     public class QuanLyLuongController : AuthorController
-    //     public class QuanLyLuongController : AuthorController
     {
         QuanLyNhanSuEntities db = new QuanLyNhanSuEntities();
         //
