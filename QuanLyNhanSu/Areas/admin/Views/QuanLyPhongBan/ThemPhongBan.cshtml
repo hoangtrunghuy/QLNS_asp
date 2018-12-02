@@ -34,14 +34,15 @@
     <div class="form-group">
         <!--start-->
         <div class="control-label col-md-offset-1 col-md-4 col-sm-4">
-            <label>Mã phòng ban</label>
+            <!--<label>Mã phòng ban</label>-->
         </div>
         <div class="col-md-4 col-sm-8">
-            <input type="text" name="MaPhongBan"
+            <input type="hidden" name="MaPhongBan"
                    class="form-control"
                    id="MaPhongBan"
                    value="@Model.MaPhongBan"
-                   required />
+                   required
+                   placeholder="MaPhongBan" />
 
         </div>
         <div class="col-sm-offset-4 col-sm-5" style="height:15px">
@@ -62,7 +63,8 @@
                    class="form-control"
                    id="TenPhongBan"
                    value="@Model.TenPhongBan"
-                   required />
+                   required
+                   onkeyup="slugify()" />
 
         </div>
         <div class="col-sm-offset-4 col-sm-5" style="height:15px">
@@ -127,4 +129,26 @@
     </div>
 </form>
 
-
+<script charset="utf-8">
+            
+    function slugify()
+    {
+        var text = document.getElementById("TenPhongBan").value;
+        var slug = text.toString().toLowerCase();
+          
+        slug = slug.replace(/á|à|ả|ạ|ã|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ/gi, 'a');
+        slug = slug.replace(/é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ/gi, 'e');
+        slug = slug.replace(/i|í|ì|ỉ|ĩ|ị/gi, 'i');
+        slug = slug.replace(/ó|ò|ỏ|õ|ọ|ô|ố|ồ|ổ|ỗ|ộ|ơ|ớ|ờ|ở|ỡ|ợ/gi, 'o');
+        slug = slug.replace(/ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự/gi, 'u');
+        slug = slug.replace(/ý|ỳ|ỷ|ỹ|ỵ/gi, 'y');
+        slug = slug.replace(/đ/gi, 'd');
+        slug = slug.replace(/\s+/g, '-')           // Replace spaces with -
+          .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+          .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+          .replace(/^-+/, '')             // Trim - from start of text
+          .replace(/-+$/, '');            // Trim - from end of text
+        document.getElementById("MaPhongBan").value = slug;
+        
+    }
+</script>

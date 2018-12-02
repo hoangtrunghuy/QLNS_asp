@@ -10,3 +10,15 @@ C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ASUS\Desktop\QLNS_asp\Luong\obj\Debug\Luong.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Desktop\QLNS_asp\Luong\obj\Debug\Luong.dll
 C:\Users\ASUS\Desktop\QLNS_asp\Luong\obj\Debug\Luong.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\bin\Debug\Luong.dll.config
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\bin\Debug\Luong.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\bin\Debug\Luong.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\bin\Debug\DAL.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\bin\Debug\EntityFramework.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\bin\Debug\EntityFramework.SqlServer.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\bin\Debug\DAL.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\bin\Debug\EntityFramework.xml
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\bin\Debug\EntityFramework.SqlServer.xml
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\obj\Debug\Luong.csprojResolveAssemblyReference.cache
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\obj\Debug\Luong.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\Luong\obj\Debug\Luong.pdb

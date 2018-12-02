@@ -8,3 +8,13 @@ C:\Users\ASUS\Desktop\QLNS_asp\DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ASUS\Desktop\QLNS_asp\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Desktop\QLNS_asp\DAL\obj\Debug\DAL.dll
 C:\Users\ASUS\Desktop\QLNS_asp\DAL\obj\Debug\DAL.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\bin\Debug\DAL.dll.config
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\bin\Debug\DAL.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\bin\Debug\DAL.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\bin\Debug\EntityFramework.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\bin\Debug\EntityFramework.xml
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\obj\Debug\DAL.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\DAL\obj\Debug\DAL.pdb

@@ -10,3 +10,15 @@ C:\Users\ASUS\Desktop\QLNS_asp\KhenThuong\bin\Debug\EntityFramework.SqlServer.xm
 C:\Users\ASUS\Desktop\QLNS_asp\KhenThuong\obj\Debug\KhenThuong.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Desktop\QLNS_asp\KhenThuong\obj\Debug\KhenThuong.dll
 C:\Users\ASUS\Desktop\QLNS_asp\KhenThuong\obj\Debug\KhenThuong.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\bin\Debug\KhenThuong.dll.config
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\bin\Debug\KhenThuong.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\bin\Debug\KhenThuong.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\bin\Debug\DAL.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\bin\Debug\EntityFramework.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\bin\Debug\EntityFramework.SqlServer.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\bin\Debug\DAL.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\bin\Debug\EntityFramework.xml
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\bin\Debug\EntityFramework.SqlServer.xml
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\obj\Debug\KhenThuong.csprojResolveAssemblyReference.cache
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\obj\Debug\KhenThuong.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\KhenThuong\obj\Debug\KhenThuong.pdb

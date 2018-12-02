@@ -84,7 +84,7 @@ namespace QuanLyNhanSu.Areas.admin.Controllers
                 }
                 else
                 {
-                    ViewBag.err = "mã phòng ban đã tồn tại ";
+                    ViewBag.err = "Phòng ban đã tồn tại";
                     return View(pb);
                 }
             }

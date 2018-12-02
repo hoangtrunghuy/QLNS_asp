@@ -10,3 +10,15 @@ C:\Users\ASUS\Desktop\QLNS_asp\User\bin\Debug\EntityFramework.xml
 C:\Users\ASUS\Desktop\QLNS_asp\User\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ASUS\Desktop\QLNS_asp\User\obj\Debug\User.dll
 C:\Users\ASUS\Desktop\QLNS_asp\User\obj\Debug\User.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\bin\Debug\User.dll.config
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\bin\Debug\User.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\bin\Debug\User.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\bin\Debug\DAL.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\bin\Debug\EntityFramework.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\bin\Debug\EntityFramework.SqlServer.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\bin\Debug\DAL.pdb
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\bin\Debug\EntityFramework.xml
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\bin\Debug\EntityFramework.SqlServer.xml
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\obj\Debug\User.csprojResolveAssemblyReference.cache
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\obj\Debug\User.dll
+D:\TÀI LIỆU KỲ 7\QLNS_asp\User\obj\Debug\User.pdb
