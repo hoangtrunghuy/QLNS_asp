@@ -1,0 +1,12 @@
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\bin\Debug\PhongBan.dll.config
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\bin\Debug\PhongBan.dll
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\bin\Debug\PhongBan.pdb
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\bin\Debug\DAL.dll
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\bin\Debug\DAL.pdb
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\obj\Debug\PhongBan.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\obj\Debug\PhongBan.dll
+C:\Users\ASUS\Desktop\QLNS_asp\PhongBan\obj\Debug\PhongBan.pdb

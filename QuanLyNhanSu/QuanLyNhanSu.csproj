@@ -45,6 +45,10 @@
     <Reference Include="ClosedXML">
       <HintPath>..\packages\ClosedXML.0.87.1\lib\net40\ClosedXML.dll</HintPath>
     </Reference>
+    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DAL\bin\Debug\DAL.dll</HintPath>
+    </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
@@ -535,13 +539,17 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{673e660b-2a9c-4ec2-99f4-77504d9ed171}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\KhenThuong\KhenThuong.csproj">
       <Project>{a008b0fd-3814-4ae2-ae00-ba2e6d32a226}</Project>
       <Name>KhenThuong</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Luong\Luong.csproj">
+      <Project>{256d6751-3697-47f4-8fa9-3e6431ff7fb1}</Project>
+      <Name>Luong</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PhongBan\PhongBan.csproj">
+      <Project>{a0d9c43d-775a-4dac-9d3f-fd7fd71aa0d3}</Project>
+      <Name>PhongBan</Name>
     </ProjectReference>
     <ProjectReference Include="..\User\User.csproj">
       <Project>{cb40d520-b1b5-47a2-b1d5-66e05b1ed0f5}</Project>

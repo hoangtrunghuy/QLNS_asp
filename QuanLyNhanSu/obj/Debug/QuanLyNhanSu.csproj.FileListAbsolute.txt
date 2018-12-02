@@ -130,3 +130,7 @@ C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\User.dll
 C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\User.pdb
 C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\KhenThuong.dll
 C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\KhenThuong.pdb
+C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\Luong.dll
+C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\Luong.pdb
+C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\PhongBan.dll
+C:\Users\ASUS\Desktop\QLNS_asp\QuanLyNhanSu\bin\PhongBan.pdb

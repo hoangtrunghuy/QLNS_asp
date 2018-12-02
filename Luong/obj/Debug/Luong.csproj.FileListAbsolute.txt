@@ -1,0 +1,12 @@
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\Luong.dll.config
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\Luong.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\Luong.pdb
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\DAL.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\DAL.pdb
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\obj\Debug\Luong.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\obj\Debug\Luong.dll
+C:\Users\ASUS\Desktop\QLNS_asp\Luong\obj\Debug\Luong.pdb

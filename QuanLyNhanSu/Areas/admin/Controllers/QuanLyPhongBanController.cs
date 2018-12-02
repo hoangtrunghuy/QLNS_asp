@@ -9,17 +9,18 @@ using System.Web.UI.WebControls;
 using System.IO;
 using System.Web.UI;
 using DAL;
+using PhongBan;
+
 namespace QuanLyNhanSu.Areas.admin.Controllers
 {
     public class QuanLyPhongBanController : AuthorController
     {
         QuanLyNhanSuEntities db = new QuanLyNhanSuEntities();
-        //
+        Department phongban = new Department();
         // GET: /admin/QuanLyPhongBan/
         public ActionResult Index()
-        {
-            var phongban = db.PhongBans.ToList();
-            return View(phongban);
+        {          
+            return View(phongban.GetPhongBan());
         }
         [HttpGet]
         public ActionResult SuaPhongBan(String id)
@@ -72,7 +73,7 @@ namespace QuanLyNhanSu.Areas.admin.Controllers
 
                 if (checkPB == false)
                 {
-                    PhongBan add = new PhongBan();
+                    DAL.PhongBan add = new DAL.PhongBan();
                     add.MaPhongBan = pb.MaPhongBan;
                     add.TenPhongBan = pb.TenPhongBan;
                     add.DiaChi = pb.DiaChi;
@@ -119,98 +120,22 @@ namespace QuanLyNhanSu.Areas.admin.Controllers
         [HttpPost]
         public ActionResult ChuyenNhanVien(NhanVien nv, LuanChuyenNhanVien fl)
         {
-            var nvChuyen = db.NhanViens.Where(n => n.MaNhanVien == nv.MaNhanVien).FirstOrDefault();
-
-            nvChuyen.MaNhanVien = nv.MaNhanVien;
-            nvChuyen.HoTen = nv.HoTen;
-            nvChuyen.MaChucVuNV = nv.MaChucVuNV;
-            nvChuyen.MaPhongBan = fl.PhongBanDen;
-
-            nvChuyen.MatKhau = nv.MatKhau;
-            nvChuyen.GioiTinh = nv.GioiTinh;
-            nvChuyen.QueQuan = nv.QueQuan;
-            nvChuyen.HinhAnh = nv.HinhAnh;
-            nvChuyen.DanToc = nv.DanToc;
-            nvChuyen.sdt_NhanVien = nv.sdt_NhanVien;
-            nvChuyen.MaHopDong = nv.MaHopDong;
-            nvChuyen.NgaySinh = nv.NgaySinh;
-            nvChuyen.TrangThai = nv.TrangThai;
-            nvChuyen.MaChuyenNganh = nv.MaChuyenNganh;
-            nvChuyen.MaTrinhDoHocVan = nv.MaTrinhDoHocVan;
-            nvChuyen.CMND = nv.CMND;
-
-            //add vao bang luan chuyen nhan vien
-            LuanChuyenNhanVien tableChuyen = new LuanChuyenNhanVien();
-            tableChuyen.MaNhanVien = nv.MaNhanVien;
-            tableChuyen.NgayChuyen = DateTime.Now.Date;
-            tableChuyen.PhongBanChuyen = nv.MaPhongBan; //
-
-            tableChuyen.PhongBanDen = fl.PhongBanDen;
-            tableChuyen.LyDoChuyen = fl.LyDoChuyen;
-            //cap nhat lại phụ cấp chức vụ
-            var luong = db.Luongs.Where(n => n.MaNhanVien.Equals(nv.MaNhanVien)).SingleOrDefault();
-            var chucvu = db.ChucVuNhanViens.Where(n => n.MaChucVuNV.Equals(nv.MaChucVuNV)).SingleOrDefault();
-
-            if (chucvu.HSPC != null)
-            {
-                luong.PhuCap = chucvu.HSPC;
-
-            }
-            else
-            {
-                luong.PhuCap = 0;
-            }
-
-
-            //add vao csdl quá trình công tác
-            db.LuanChuyenNhanViens.Add(tableChuyen);
-            db.SaveChanges();
+            phongban.ChuyenNhanVien(nv, fl);
             return Redirect("/admin/QuanLyPhongBan");
         }
 
 
         public ActionResult XoaPhongBan(String id)
         {
-            var pb = db.PhongBans.Where(n => n.MaPhongBan == id).FirstOrDefault();
-
-            // những nhân viên phòngban
-            var nv = db.NhanViens.Where(n => n.MaPhongBan == id).ToList();
-
-            //danh sách hợp đồng
-            var hd = db.HopDongs.ToList();
-
-            /*
-             * mã phòng ban
-             * mã hợp đồng = mã nhân viên
-             */
-
-            foreach (var item in hd)
-            {
-                foreach (var i in nv)
-                {
-                    if (item.MaHopDong == i.MaHopDong)
-                    {
-                        db.NhanViens.Remove(i);
-                        db.SaveChanges();
-                    }
-
-                }
-                db.HopDongs.Remove(item);
-                db.SaveChanges();
-            }
-            if (pb != null)
-            {
-                db.PhongBans.Remove(pb);
-                db.SaveChanges();
-            }
+            phongban.DeletePhongBan(id);
             return Redirect("/admin/QuanLyPhongBan");
         }// end xoa phong ban
 
         [HttpGet]
         public ActionResult CapNhatPhuCap()
         {
-            var pbcv = db.ChucVuNhanViens.ToList();
-            return View(pbcv);
+            //var pbcv = db.ChucVuNhanViens.ToList();
+            return View(phongban.GetPhuCap());
         }
         [HttpPost]
         public ActionResult CapNhatPhuCap(ChucVuNhanVien cv, String id, FormCollection f)

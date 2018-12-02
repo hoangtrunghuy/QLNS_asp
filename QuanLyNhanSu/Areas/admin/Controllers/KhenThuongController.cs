@@ -29,16 +29,6 @@ namespace QuanLyNhanSu.Areas.admin.Controllers
         [HttpPost]
         public ActionResult khen(DAL.KhenThuong kt)
         {
-            //var ct = db.ChiTietLuongs.Where(n => n.MaNhanVien == kt.MaNhanVien).FirstOrDefault();
-
-            //KhenThuong ad = new KhenThuong();
-            //ad.MaNhanVien = kt.MaNhanVien;
-            //ad.ThangThuong = kt.ThangThuong;
-            //ad.TienThuong = kt.TienThuong;
-            //ad.LyDo = kt.LyDo;
-
-            //db.KhenThuongs.Add(ad);
-            //db.SaveChanges();
             khenthuong.AddKhenThuong(kt);
             return Redirect("/admin/KhenThuong");
         }
